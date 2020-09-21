@@ -8,14 +8,18 @@ LunchCheckController.$inject= ['$scope'];
 
 function LunchCheckController ($scope)
 {
+
   $scope.name= "";
   $scope.message = "";
   $scope.itemcolor = "";
+  $scope.txtbordercolor = "form-control";
+
 
   $scope.countMyfooditems = function () {
     if ($scope.name == "") {
       $scope.message = "Please enter data first";
       $scope.itemcolor = "messagered";
+      $scope.txtbordercolor = "form-control txtborderred";
 
       }
     else  {
@@ -31,10 +35,14 @@ function LunchCheckController ($scope)
     if (totalFoodItems <= '3')   {
       $scope.message = "Enjoy !";
       $scope.itemcolor = "messagegreen";
+      $scope.txtbordercolor = "form-control txtbordergreen";
+
     }
 
     else { $scope.message = "Too much!" ;
     $scope.itemcolor = "messagered";
+    $scope.txtbordercolor = "form-control txtborderred";
+
  }
     }
   };

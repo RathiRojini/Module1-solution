@@ -9,6 +9,9 @@
       <style>
         .messagegreen { font-size: 1.3em; font-weight: bold; color: green}
         .messagered { font-size: 1.3em; font-weight: bold; color: red}
+        .txtbordergreen {border-color:green}
+        .txtborderred {border-color:red}
+
       </style>
 
     </head>
@@ -19,7 +22,7 @@
              <div class="form-group">
                  <input id="lunch-menu" type="text"
                  placeholder="list comma separated dishes you usually have for lunch"
-                 class="form-control"
+                 class= "{{ txtbordercolor }}"
                  ng-model="name">
              </div>
              <div class="form-group">
